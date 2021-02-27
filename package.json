@@ -1,0 +1,39 @@
+{
+  "name": "movenation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.7",
+    "airtable": "^0.10.1",
+    "axios": "^0.21.1",
+    "deepmerge": "^4.2.2",
+    "gql-tag": "^1.0.1",
+    "graphql": "^15.5.0",
+    "lodash": "^4.17.20",
+    "next": "10.0.5",
+    "next-iron-session": "^4.1.10",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-hook-form": "^6.14.1",
+    "react-is": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "swr": "^0.4.0",
+    "use-airtable": "^1.0.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "babel-plugin-styled-components": "^1.12.0",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
+  }
+}
