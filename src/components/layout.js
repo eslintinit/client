@@ -6,6 +6,8 @@ const Layout = ({
   bg = 'white',
   hideFooter = false,
   hideHeader = false,
+  headerFixed = false,
+  headerLight = false,
 }) => (
   <div
     className={`w-r elative flex flex-col full items-center py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-${bg}`}
@@ -13,7 +15,7 @@ const Layout = ({
     <Head>
       <title>Movenation</title>
     </Head>
-    {!hideHeader && <Header />}
+    {!hideHeader && <Header fixed={headerFixed} light={headerLight} />}
     {children}
     {!hideFooter && <Footer />}
   </div>

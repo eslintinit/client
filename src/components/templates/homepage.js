@@ -7,21 +7,23 @@ import {
   Testimonials,
   Content,
   AdvisorsSection,
+  AdvisorsSectionOne,
   CTA,
 } from 'components/organisms'
 
 export const HomepageTemplate = () => {
   return (
-    <Layout>
+    <Layout bg="gray-50">
       <Intro />
-      <Feature />
-      <Feature />
-      <MoveSection />
       <Steps />
       <Testimonials />
       <Content />
+      {/*
+      <MoveSection />
       <AdvisorsSection />
+      <AdvisorsSectionOne />
       <CTA />
+      */}
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-export const TimelineItem = () => {
+export const TimelineItem = ({ event }) => {
   return (
     <li className="feed-item relative pb-5 pl-6 border-r-2 border-indigo-300 last:border-transparent flex flex-col justify-end pr-6">
       <time
@@ -7,9 +7,7 @@ export const TimelineItem = () => {
       >
         SEP 25, 2020
       </time>
-      <span className="text text-sm text-right pb-8">
-        Moved from Denmark to Switzerland
-      </span>
+      <span className="text text-sm text-right pb-8">{event}</span>
     </li>
   )
 }

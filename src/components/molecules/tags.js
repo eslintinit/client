@@ -1,11 +1,11 @@
 import { Tag } from 'components/atoms'
 
-export const Tags = () => {
+export const Tags = ({ tags }) => {
   return (
     <div className="flex mt-2">
-      <Tag />
-      <Tag />
-      <Tag />
+      {tags.map((tag) => (
+        <Tag tag={tag} key={tag} />
+      ))}
     </div>
   )
 }

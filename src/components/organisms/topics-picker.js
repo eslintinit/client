@@ -1,16 +1,12 @@
 import { Checkbox } from 'components/atoms'
 
-export const TopicsPicker = () => {
+export const TopicsPicker = ({ label, topics, onTopicSelect }) => {
   return (
-    <div className="flex h-min w-1/4 flex-col ml-8 pl-4 border-l self-start">
-      <div className="flex flex-col">
-        <Checkbox label="Relocation Tax  " />
-        <Checkbox label="Costs of moving" />
-        <Checkbox label="Work permit" />
-        <Checkbox label="Setting up a company" />
-        <Checkbox label="Citizenship by investment" />
-        <Checkbox label="Children relocation moving" />
-      </div>
+    <div className="flex flex-col mb-8">
+      <span className="text-sm">{label}</span>
+      {topics.map((topic) => (
+        <Checkbox key={topic} label={topic} onCheck={onTopicSelect} />
+      ))}
     </div>
   )
 }

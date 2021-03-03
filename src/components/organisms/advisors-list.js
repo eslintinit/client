@@ -1,18 +1,11 @@
 import { AdvisorListItem } from 'components/molecules'
 
-// <div className="grid grid-cols-1 divide-y divide-gray-200 gap-y-8">
-export const AdvisorsList = () => {
+export const AdvisorsList = ({ advisors }) => {
   return (
-    <div className="flex flex-grow flex-col">
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
-      <AdvisorListItem />
+    <div className="flex w-4/5 flex-grow flex-col">
+      {advisors.map((advisor) => (
+        <AdvisorListItem advisor={advisor} key={advisor.id} />
+      ))}
     </div>
   )
 }

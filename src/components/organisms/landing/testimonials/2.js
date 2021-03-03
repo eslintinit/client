@@ -6,7 +6,7 @@ export const AdvisorsSection = () => {
           Moving? Get advice from people who've done it.
         </h2>{' '}
         <p className="text-base text-gray-700 md:text-lg">
-          MoveNation is a platform for international movers and immigrants to
+          Movenation is a platform for international movers and immigrants to
           share their insights, advice, experiences and challenges with other
           people who are thinking about moving. We offer a forum where you can
           get answers to your questions, or just read up on how others have

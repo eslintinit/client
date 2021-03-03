@@ -6,156 +6,82 @@ export const Steps = () => {
           <div className="flex">
             <div className="flex flex-col items-center mr-4">
               <div>
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                  <svg
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                    className="w-4 text-indigo-500"
-                  >
-                    <line
-                      fill="none"
-                      strokeMiterlimit={10}
-                      x1={12}
-                      y1={2}
-                      x2={12}
-                      y2={22}
-                    />{' '}
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit={10}
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
+                <div className="flex items-center justify-center w-10 h-10 border rounded-full text-indigo-500">
+                  1
                 </div>
               </div>{' '}
               <div className="w-px h-full bg-gray-300" />
             </div>{' '}
             <div className="pt-1 pb-8">
               <p className="text-gray-900 mb-2 text-lg font-bold">
-                Select your country of destination.
+                Pick an advisor.
               </p>{' '}
               <p className="text-gray-700">
-                MoveNation is a community of people who have moved to other
-                countries and share their insights, tips and advice on the best
-                places to live, work, study or retire abroad.
+                Movenation is a global network of people who have moved country.
+                Browse & search our community of advisors that have gone through
+                the process of moving to the country/city you are considering
+                and find the right one for you.
               </p>
             </div>
           </div>{' '}
           <div className="flex">
             <div className="flex flex-col items-center mr-4">
               <div>
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                  <svg
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                    className="w-4 text-indigo-500"
-                  >
-                    <line
-                      fill="none"
-                      strokeMiterlimit={10}
-                      x1={12}
-                      y1={2}
-                      x2={12}
-                      y2={22}
-                    />{' '}
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit={10}
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
+                <div className="flex items-center justify-center w-10 h-10 border rounded-full text-indigo-500">
+                  2
                 </div>
               </div>{' '}
               <div className="w-px h-full bg-gray-300" />
             </div>{' '}
             <div className="pt-1 pb-8">
               <p className="text-gray-900 mb-2 text-lg font-bold">
-                Ask for advice.
+                Schedule a call or zoom
               </p>{' '}
               <p className="text-gray-700">
-                MoveNation is a community of people who have moved to other
-                countries and share their insights, tips and advice on the best
-                places to live, work, study or retire abroad.
+                Select date and time that works best for your schedule and
+                specify the topics you want to discuss. The advisor has 72 hours
+                to respond, or the request will expire.
               </p>
             </div>
-          </div>{' '}
+          </div>
           <div className="flex">
             <div className="flex flex-col items-center mr-4">
               <div>
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                  <svg
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                    className="w-4 text-indigo-500"
-                  >
-                    <line
-                      fill="none"
-                      strokeMiterlimit={10}
-                      x1={12}
-                      y1={2}
-                      x2={12}
-                      y2={22}
-                    />{' '}
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit={10}
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
+                <div className="flex items-center justify-center w-10 h-10 border rounded-full text-indigo-500">
+                  3
                 </div>
               </div>{' '}
               <div className="w-px h-full bg-gray-300" />
             </div>{' '}
             <div className="pt-1 pb-8">
               <p className="text-gray-900 mb-2 text-lg font-bold">
-                Streamline the process.
+                The call/meeting is confirmed
               </p>{' '}
               <p className="text-gray-700">
-                Get access to exclusive articles by international journalists in
-                English, French &amp; Spanish; meet locals in your new city
-                through our online events; discover key cultural differences
-                that will make or break your relocation experience (e.g., local
-                customs, religious practices).
+                You will receive a confirmation email with a conference line or
+                zoom and access code provided. Block out your calendar and
+                prepare some questions to cover in the call.
               </p>
             </div>
-          </div>{' '}
+          </div>
           <div className="flex">
             <div className="flex flex-col items-center mr-4">
               <div>
-                <div className="flex items-start justify-center w-10 h-10 border rounded-full">
-                  <svg
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    className="mt-2 w-6 text-indigo-500"
-                  >
-                    <polyline
-                      fill="none"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeMiterlimit={10}
-                      points="6,12 10,16 18,8"
-                    />
-                  </svg>
+                <div className="flex items-center justify-center w-10 h-10 border rounded-full text-indigo-500">
+                  4
                 </div>
               </div>
-            </div>{' '}
+            </div>
             <div className="pt-1 pb-8">
-              <p className="text-gray-900 mb-2 text-lg font-bold">Relocate</p>{' '}
+              <p className="text-gray-900 mb-2 text-lg font-bold">
+                Get advice and insights
+              </p>
               <p className="text-gray-700">
-                For those looking for more information before they leave home we
-                offer comprehensive country guides outlining immigration rules
-                as well as links to all the necessary government forms needed
-                for a successful application process."
+                Learn everything there is to know about the new country/city you
+                are about to move to. Form friendships before even moving
+                abroad. After the call, you’ll be charged the expert’s
+                per-minute rate, and they get paid. You can then leave a rating
+                and review for the advisor.
               </p>
             </div>
           </div>

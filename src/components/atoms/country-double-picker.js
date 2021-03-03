@@ -1,12 +1,50 @@
-const Ukraine = () => <span className="cursor-pointer">🇺🇦 Ukraine</span>
-const Denmark = () => <span className="cursor-pointer">🇩🇰 Denmark</span>
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 export const CountryDoublePicker = () => {
+  const [countries, setCountries] = useState([])
+  const [input1Width, setInput1Width] = useState(120)
+  const [input2Width, setInput2Width] = useState(80)
+
+  useEffect(() => {
+    axios
+      .get(
+        'https://unpkg.com/country-flag-emoji-json@1.0.2/json/flag-emojis.json',
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          setCountries(response.data)
+        }
+      })
+  }, [])
+
   return (
     <div className="border border-gray-500 font-medium p-4 px-8 rounded-full hover:border-indigo-500 hover:border-2">
-      <Ukraine />
+      <select
+        className="appearance-none cursor-pointer bg-transparent"
+        style={{ width: input1Width }}
+        onChange={(e) => {
+          setInput1Width(+e.target.value.length * 7)
+        }}
+      >
+        <option>🇺🇸 United states</option>
+        {countries.map((country) => (
+          <option>{`${country.emoji} ${country.name}`}</option>
+        ))}
+      </select>
       <span className="mx-4">→</span>
-      <Denmark />
+      <select
+        className="appearance-none cursor-pointer bg-transparent"
+        style={{ width: input2Width }}
+        onChange={(e) => {
+          setInput2Width(+e.target.value.length * 7)
+        }}
+      >
+        <option>🇲🇽 Mexico</option>
+        {countries.map((country) => (
+          <option>{`${country.emoji} ${country.name}`}</option>
+        ))}
+      </select>
     </div>
   )
 }
