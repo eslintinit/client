@@ -5,7 +5,7 @@ import { Button, Input, Textarea } from 'components/atoms'
 
 export const FinalStep = ({ close }) => (
   <div
-    className="flex items-center justify-center w-full h-full bg-black bg-opacity-40 fixed"
+    className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed"
     onClick={close}
   >
     <Modal

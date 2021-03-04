@@ -5,7 +5,7 @@ export const Reviews = ({ advisor }) => {
   return (
     <div className="antialiased max-w-screen-sm">
       <div className="flex flex-row">
-        <h1 className="mb-8 text-md font-bold md:text-xl">
+        <h1 className="mb-8 text-xl font-bold md:text-xl">
           Reviews
           <span className="text-gray-400 font-medium ml-1">(8)</span>
         </h1>
