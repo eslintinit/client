@@ -25,7 +25,7 @@ export const Header = ({ fixed = false, light = false }) => {
             />
           </Link>
         </div>{' '}
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+        <ul className="flex items-center space-x-8 lg:flex">
           <li>
             <Link href="/advisors">
               <a
@@ -33,7 +33,7 @@ export const Header = ({ fixed = false, light = false }) => {
                 title="Sign in"
                 className={`font-medium tracking-wide ${
                   light ? 'text-gray-400' : 'text-gray-700'
-                } transition-colors duration-200 hover:text-gray-900`}
+                } transition-colors duration-200 hover:text-gray-900 hidden lg:flex`}
                 style={
                   light
                     ? {
@@ -84,7 +84,7 @@ export const Header = ({ fixed = false, light = false }) => {
             </Link>
           </li>
         </ul>{' '}
-        <div className="lg:hidden">
+        <div className="hidden">
           <button
             aria-label="Open Menu"
             title="Open Menu"

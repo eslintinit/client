@@ -18,7 +18,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
   } = useContext(AppContext)
 
   useEffect(() => {
-    const randomizedPrice = Math.floor(Math.random() * 30) + 1
+    const randomizedPrice = Math.floor(Math.random() * 6) + 1
     setPrice(randomizedPrice)
     setSelectedAdvisor({ ...advisor, price: randomizedPrice })
   }, [])

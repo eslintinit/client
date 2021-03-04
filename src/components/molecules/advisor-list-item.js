@@ -16,24 +16,11 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
   const { setShowBookingWidget, setSelectedAdvisor } = useContext(AppContext)
 
   useEffect(() => {
-    axios
-      .get(`https://randomuser.me/api/?gender=${advisor.gender}`)
-      .then((response) => {
-        if (response.status === 200) {
-          setAdvisor((oldAdvisor) => ({
-            ...oldAdvisor,
-            picture: response.data.results[0].picture.large,
-          }))
-        }
-      })
-  }, [])
-
-  useEffect(() => {
     setNoOfReviews(Math.floor(Math.random() * 8) + 1 - 1)
   }, [])
 
   useEffect(() => {
-    setPrice(Math.floor(Math.random() * 30) + 1)
+    setPrice(Math.floor(Math.random() * 6) + 1)
   }, [])
 
   if (!advisor) return <div />
@@ -48,7 +35,6 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
           ...advisor,
           price,
           noOfReviews,
-          picture: advisor.picture,
         })
         push({
           pathname: '/advisors/[advisor]',

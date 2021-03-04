@@ -50,7 +50,6 @@ export const BookingWidget = ({ hide }) => {
           hide()
         }}
         next={() => {
-          splitbee.track('Proceed to checkout')
           setShowPaymentStep(false)
           setShowFinalStep(true)
         }}
