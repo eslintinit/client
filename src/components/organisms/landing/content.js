@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 export const Content = () => {
   return (
@@ -27,6 +28,9 @@ export const Content = () => {
               splitbee.track('Open advisors list', {
                 from: 'CTA',
               })
+              // mixpanel.track('Open advisors list', {
+              //   from: 'CTA',
+              // })
             }}
           >
             Get started

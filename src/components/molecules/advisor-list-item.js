@@ -5,6 +5,7 @@ import { Tags } from 'components/molecules'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 import axios from 'axios'
 
@@ -43,6 +44,8 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
       className="flex items-center mb-10"
       onClick={() => {
         splitbee.track('Open advisor page')
+        global.analytics.track('Open advisor page')
+        // mixpanel.track('Open advisor page')
         // push(``, `/advisors/${advisor.id}`)
         setSelectedAdvisor({
           ...advisor,
@@ -82,6 +85,8 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
                     picture: advisor.picture,
                   })
                   splitbee.track('Start scheduling call')
+                  global.analytics.track('Start scheduling call')
+                  // mixpanel.track('Start scheduling call')
                   setShowBookingWidget(true)
                 }}
               >

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Button } from 'components/atoms'
 import { Modal, EmailStep, PaymentStep, FinalStep } from 'components/organisms'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 export const BookingWidget = ({ hide }) => {
   const [showEmailStep, setShowEmailStep] = useState(false)
@@ -17,10 +18,15 @@ export const BookingWidget = ({ hide }) => {
       disable_confirm_page: true,
       callbacks: {
         clickTimeslot: (timeslot) => {
-          console.log(timeslot.start._i)
           splitbee.track('Select timeslot', {
             time: timeslot.start._i,
           })
+          global.analytics.track('Select timeslot', {
+            time: timeslot.start._i,
+          })
+          // mixpanel.track('Select timeslot', {
+          //   time: timeslot.start._i,
+          // })
           setShowEmailStep(true)
         },
       },
@@ -51,6 +57,8 @@ export const BookingWidget = ({ hide }) => {
         }}
         next={() => {
           splitbee.track('Proceed to checkout')
+          global.analytics.track('Proceed to checkout')
+          // mixpanel.track('Proceed to checkout')
           setShowPaymentStep(false)
           setShowFinalStep(true)
         }}

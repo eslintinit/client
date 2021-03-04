@@ -1,4 +1,5 @@
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 import { Modal } from 'components/organisms'
 import { Button, Input, Textarea } from 'components/atoms'
 

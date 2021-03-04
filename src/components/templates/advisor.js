@@ -5,6 +5,7 @@ import { TopicsGrid, Timeline, FAQ } from 'components/organisms'
 import { AppContext } from 'context'
 import Layout from 'components/layout'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 import dynamic from 'next/dynamic'
 
 const Reviews = dynamic(() => import('components/organisms/reviews'))
@@ -31,7 +32,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
           <div className="flex flex-col">
             <div className="flex justify-between">
               <div className="flex flex-col">
-                {selectedAdvisor && <Avatar src={selectedAdvisor.picture} />}
+                <Avatar src={(selectedAdvisor || advisor).picture} />
                 <h2 className="text-2xl font-medium mt-4">{advisor.name}</h2>
               </div>
 
@@ -40,6 +41,8 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
                   className="mt-4 w-max"
                   onClick={() => {
                     splitbee.track('Start scheduling call')
+                    global.analytics.track('Start scheduling call')
+                    // mixpanel.track('Start scheduling call')
                     setShowBookingWidget(true)
                   }}
                 >

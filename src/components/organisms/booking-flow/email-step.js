@@ -1,4 +1,5 @@
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 import { useState } from 'react'
 import { Button, Input, Textarea } from 'components/atoms'
 import { Modal } from 'components/organisms'
@@ -18,6 +19,8 @@ export const EmailStep = ({ close, next }) => {
       className="flex items-center justify-center w-full h-full bg-black bg-opacity-40 fixed"
       onClick={() => {
         splitbee.track('Close modal: email step')
+        // mixpanel.track('Close modal: email step')
+        global.analytics.track('Close modal: email step')
         close()
       }}
     >
@@ -38,10 +41,18 @@ export const EmailStep = ({ close, next }) => {
             primary
             className="ml-2"
             onClick={() => {
+              global.analytics.track('Enter email', {
+                email,
+                notes,
+              })
               splitbee.track('Enter email', {
                 email,
                 notes,
               })
+              // mixpanel.track('Enter email', {
+              // email,
+              // notes,
+              // })
 
               createRecord({ Email: email, Notes: notes })
               next()

@@ -20,9 +20,6 @@ export const Reviews = ({ advisor }) => {
           if (!review) {
             return <div />
           }
-          console.log(review)
-          console.log(typeof review)
-          console.log('____________')
 
           return <Comment key={review} comment={review} advisor={advisor} />
         })}

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 export const Header = ({ fixed = false, light = false }) => {
   return (
@@ -50,6 +51,9 @@ export const Header = ({ fixed = false, light = false }) => {
                   splitbee.track('Open advisors list', {
                     from: 'Browse advisors',
                   })
+                  // mixpanel.track('Open advisors list', {
+                  // from: 'Browse advisors',
+                  // })
                 }}
               >
                 Browse advisors
@@ -67,6 +71,9 @@ export const Header = ({ fixed = false, light = false }) => {
                   splitbee.track('Open advisors list', {
                     from: 'Get started',
                   })
+                  // mixpanel.track('Open advisors list', {
+                  // from: 'Get started',
+                  // })
                 }}
                 title="Sign up"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-500 hover:bg-indigo-500 focus:shadow-outline focus:outline-none"

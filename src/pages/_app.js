@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client'
 import { AppProvider } from 'context'
 import Head from 'next/head'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 import 'tailwindcss/tailwind.css'
 import '../../public/css/index.css'
@@ -13,6 +14,11 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     splitbee.init()
+    // mixpanel.init(
+    //   process.env.NODE_ENV === 'development'
+    //     ? '61d6884190fb7aac237df081e24afc72'
+    //     : '03da6f561fafe2241810733bb81aa22e',
+    // )
   }, [])
 
   // <script async src="https://cdn.splitbee.io/sb.js"></script>

@@ -3,6 +3,7 @@ import { AppContext } from 'context'
 import { Modal } from 'components/organisms'
 import { Button, Input, Textarea } from 'components/atoms'
 import splitbee from '@splitbee/web'
+import mixpanel from 'mixpanel-browser'
 
 export const PaymentStep = ({ close, next }) => {
   const { selectedAdvisor } = useContext(AppContext)
@@ -12,6 +13,8 @@ export const PaymentStep = ({ close, next }) => {
       className="flex items-center justify-center w-full h-full bg-black bg-opacity-40 fixed"
       onClick={() => {
         splitbee.track('Close modal: payment step')
+        global.analytics.track('Close modal: payment step')
+        // mixpanel.track('Close modal: payment step')
         close()
       }}
     >
@@ -27,8 +30,14 @@ export const PaymentStep = ({ close, next }) => {
           <Button
             onClick={() => {
               splitbee.track('Proceed to payment', {
-                price: 5,
+                price: selectedAdvisor.price * 60,
               })
+              global.analytics.track('Proceed to payment', {
+                price: selectedAdvisor.price * 60,
+              })
+              // mixpanel.track('Proceed to payment', {
+              //   price: selectedAdvisor.price * 60,
+              // })
               next()
             }}
           >
