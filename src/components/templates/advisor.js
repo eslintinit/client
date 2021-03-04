@@ -26,7 +26,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
   return (
     <Layout bg="gray-50" hideFooter hideHeader>
       <Back />
-      <div className="flex flex-col w-4/5 mt-20 min-h-screen max-w-3xl">
+      <div className="flex flex-col px-4 lg:px-0 w-full lg:w-4/5 mt-8 lg:mt-20 min-h-screen max-w-3xl lg:max-w-2xl">
         <div className="flex justify-between">
           <div className="flex flex-col">
             <div className="flex justify-between">
@@ -53,7 +53,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
                 )}
               </div>
             </div>
-            <span className="text-lg text-gray-700 w-9/12 mt-4 mb-2">
+            <span className="text-lg text-gray-700 w-full mt-4 mb-2">
               {advisor.bio}
             </span>
             <Tags tags={advisor.tags || []} />

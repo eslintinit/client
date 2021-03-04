@@ -70,10 +70,10 @@ export const BookingWidget = ({ hide }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-full h-full bg-black bg-opacity-40 fixed"
+      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed"
       onClick={hide}
     >
-      <div style={{ width: '70vw' }} onClick={(e) => e.stopPropagation()}>
+      <div className="w-11/12 lg:w-3/4" onClick={(e) => e.stopPropagation()}>
         <div id="bookingjs"></div>
       </div>
     </div>

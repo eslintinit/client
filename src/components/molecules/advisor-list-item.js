@@ -27,7 +27,7 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
 
   return (
     <div
-      className="flex items-center mb-10"
+      className="flex flex-col md:flex-row items-center mb-10"
       onClick={() => {
         splitbee.track('Open advisor page')
         // push(``, `/advisors/${advisor.id}`)
@@ -43,21 +43,21 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
         })
       }}
     >
-      <div className="min-w-24 w-24 min-w-max self-start mt-1 cursor-pointer">
+      <div className="min-w-24 w-24 mx-auto md:mx-0 min-w-max self-start mt-1 mb-4 md:mb-0 cursor-pointer">
         <Avatar src={advisor.picture} />
       </div>
-      <div className="flex justify-between border-b pb-10">
+      <div className="flex justify-between items-center md:items-start border-b pb-10">
         <div className="flex flex-col ml-4">
-          <h2 className="text-lg font-medium cursor-pointer">{`${advisor.name} ‎ ‎🇺🇸 → 🇲🇽`}</h2>
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-col w-9/12">
-              <span className="text-gray-600 font-regular my-2">
+          <h2 className="text-lg font-medium cursor-pointer text-center md:text-left">{`${advisor.name} ‎ ‎🇺🇸 → 🇲🇽`}</h2>
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="flex flex-col w-full md:w-9/12">
+              <span className="text-gray-600 font-regular my-2 text-center md:text-left">
                 {advisor.bio}
               </span>
 
               <Tags tags={advisor.tags} />
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col-reverse md:flex-col items-center mt-4 md:mt-0">
               <Button
                 onClick={(e) => {
                   e.stopPropagation()
@@ -70,23 +70,26 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
                   splitbee.track('Start scheduling call')
                   setShowBookingWidget(true)
                 }}
+                className="mt-4 md:mt-0"
               >
                 Get in touch
               </Button>
-              {price && (
-                <div className="flex flex-col items-center mt-2 border-b pb-2">
-                  <span className="text-sm text-medium text-gray-700">{`$${price}`}</span>
-                  <span className="text-xs text-gray-500">per minute</span>
-                </div>
-              )}
-              {noOfReviews > 0 && (
-                <a
-                  href="#"
-                  className="component hover:border-b-2 text-gray-500 border-gray-400 hover:border-gray-500 hover:text-gray-600 text-xs mt-2"
-                >
-                  {`${noOfReviews} reviews`}
-                </a>
-              )}
+              <div className="flex flex-col">
+                {price && (
+                  <div className="flex flex-col items-center mt-2 border-b pb-2">
+                    <span className="text-sm text-medium text-gray-700">{`$${price}`}</span>
+                    <span className="text-xs text-gray-500">per minute</span>
+                  </div>
+                )}
+                {noOfReviews > 0 && (
+                  <a
+                    href="#"
+                    className="component hover:border-b-2 text-gray-500 border-gray-400 hover:border-gray-500 hover:text-gray-600 text-xs mt-2 mx-auto md:mx-0"
+                  >
+                    {`${noOfReviews} reviews`}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
