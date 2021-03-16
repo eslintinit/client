@@ -9,6 +9,9 @@ import {
   AdvisorsSection,
   AdvisorsSectionOne,
   CTA,
+  Organisations,
+  FeaturedIn,
+  About,
 } from 'components/organisms'
 
 export const HomepageTemplate = () => {
@@ -17,6 +20,10 @@ export const HomepageTemplate = () => {
       <Intro />
       <Steps />
       <Testimonials />
+      {/*
+      <CTA />
+      */}
+      <FeaturedIn />
       <Content />
       {/*
       <MoveSection />

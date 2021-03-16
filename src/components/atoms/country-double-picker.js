@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-export const CountryDoublePicker = () => {
+export const CountryDoublePicker = ({ setCountryFrom, setCountryTo }) => {
   const [countries, setCountries] = useState([])
   const [input1Width, setInput1Width] = useState(120)
   const [input2Width, setInput2Width] = useState(80)
@@ -25,6 +25,13 @@ export const CountryDoublePicker = () => {
         style={{ width: input1Width }}
         onChange={(e) => {
           setInput1Width(+e.target.value.length * 7)
+          console.log(e.target.value)
+          if (e.target.value === '🇺🇸 United states') {
+            alert('hooray')
+            setCountryFrom('usa')
+          } else {
+            setCountryFrom(e.target.value)
+          }
         }}
       >
         <option>🇺🇸 United states</option>
@@ -38,6 +45,12 @@ export const CountryDoublePicker = () => {
         style={{ width: input2Width }}
         onChange={(e) => {
           setInput2Width(+e.target.value.length * 7)
+          if (e.target.value === '🇲🇽 Mexico') {
+            alert('hooray2')
+            setCountryTo('mx')
+          } else {
+            setCountryTo(e.target.value)
+          }
         }}
       >
         <option>🇲🇽 Mexico</option>

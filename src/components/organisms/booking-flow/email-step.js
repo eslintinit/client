@@ -16,7 +16,7 @@ export const EmailStep = ({ close, next }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed"
+      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed z-10"
       onClick={() => {
         splitbee.track('Close modal: email step')
         // mixpanel.track('Close modal: email step')

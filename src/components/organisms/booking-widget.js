@@ -76,7 +76,7 @@ export const BookingWidget = ({ hide }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed"
+      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed z-10"
       onClick={hide}
     >
       <div className="w-11/12 lg:w-3/4" onClick={(e) => e.stopPropagation()}>

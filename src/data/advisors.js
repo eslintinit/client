@@ -8,7 +8,20 @@ export const advisors = [
     bio: `Hi, My name is Matt.  A 22 year old living in Mexico. I study Spanish philosophy and have lived two years in Mexico and love it here. I hope I can help other students that are about to embark on the same adventure as me. I would love to meet new friends and consult you on the adventure. Despite me being very detailed I did make a few mistakes in the legal and housing setup that could save you $2.000 to avoid.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Study'],
+    monthlyLivingCost: '$1,200',
+    movingBudget: '$8,000',
+    yearOfMove: 2016,
+    movingReason: 'Study',
+    tags: [
+      {
+        label: 'Study',
+        tooltip: 'Matt has moved to Mexico for study purposes',
+      },
+      {
+        label: '⏳ Moved 5 years ago',
+        tooltip: 'Matt moved to Mexico in 2016',
+      },
+    ],
   },
   {
     id: 2,
@@ -18,7 +31,24 @@ export const advisors = [
     bio: `Hi, I am Amy I used to live in Mexico for 4 years taking my PhD. I look forward to helping you with all the practical questions of moving from USA to Mexico. I will gladly introduce you to friends of mine here. How the academic system work (not like in the US) and increase your odds of getting your degree.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Study', 'PhD student'],
+    monthlyLivingCost: '$1,600',
+    movingBudget: '$9,200',
+    yearOfMove: 2016,
+    movingReason: 'Study',
+    tags: [
+      {
+        label: 'Study',
+        tooltip: 'Moved for study',
+      },
+      {
+        label: 'PhD student',
+        tooltip: 'Amy is PhD of philosophy',
+      },
+      {
+        label: '⏳ Moved 5 years ago',
+        tooltip: 'Amy moved to Mexico in 2016',
+      },
+    ],
   },
   {
     id: 3,
@@ -28,7 +58,24 @@ export const advisors = [
     bio: `Hi, I my name is Dana. I am a 20 year old American who used to live in Liverpool, but now studies in Mexico because I wanted to improve my Spanish. I can assist you with all the details you will need to live in Mexico.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Study', 'Spanish student'],
+    monthlyLivingCost: '$1,500',
+    movingBudget: '$6,000',
+    yearOfMove: 2019,
+    movingReason: 'Study',
+    tags: [
+      {
+        label: 'Study',
+        tooltip: 'Moved for study',
+      },
+      {
+        label: 'Spanish student',
+        tooltip: 'Dana is studying Spanish in Mexico',
+      },
+      {
+        label: '⏳ Moved 10 years ago',
+        tooltip: 'Dana moved in 2011',
+      },
+    ],
   },
   // work
   {
@@ -36,10 +83,23 @@ export const advisors = [
     name: 'Wanda Ortiz',
     gender: 'female',
     picture: 'https://randomuser.me/api/portraits/women/17.jpg',
-    bio: `Social media geek. Music trailblazer. Devoted internet advocate. Pop culture buff. Introvert. I moved to Mexico 2 years ago and can help you out with the process`,
+    bio: `Social media geek. Music trailblazer. Devoted internet advocate. Pop culture buff. Introvert. Moved to Mexico 2 years ago and can help you out with the process :)`,
     from: 'usa',
     to: 'mx',
-    tags: ['Work'],
+    monthlyLivingCost: '$4,200',
+    movingBudget: '$14,000',
+    yearOfMove: 2018,
+    movingReason: 'Work',
+    tags: [
+      {
+        label: 'Work',
+        tooltip: 'Moved for study',
+      },
+      {
+        label: '⏳ Moved year ago',
+        tooltip: 'Wanda moved in 2020',
+      },
+    ],
   },
   // {
   //   id: 7,
@@ -49,7 +109,7 @@ export const advisors = [
   //   bio: `Greg is an invisible teenager who is addicted to video games. People often compare him to a supermodel. His biggest fear is growing old alone. He is striving to redeem himself after pushing an old lady off a cliff.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Work', 'Invisible teenager'],
+  //   tags: ['Work', 'Invisible teenager',  '⏳ Moved 5 years ago'],
   // },
   // {
   //   id: 8,
@@ -59,7 +119,7 @@ export const advisors = [
   //   bio: `A reckless teenager from Boston is obsessed with ghosts. Physically, she is built like a cat. Her top quality is that she is particularly kind. She is particularly interested in finding love.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Reckless teenager'],
+  //   tags: ['Reckless teenager',  '⏳ Moved 5 years ago'],
   // },
   // {
   //   id: 9,
@@ -69,7 +129,7 @@ export const advisors = [
   //   bio: `Mel Blaese is a criminal woman from Plymouth who can only sleep wearing a mask. She looks like she needs a good night's sleep. She always carries a pistol. On Tuesdays, she likes to cut her toenails.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Work', 'Criminal woman'],
+  //   tags: ['Work', 'Criminal woman',  '⏳ Moved 5 years ago'],
   // },
   // {
   //   id: 10,
@@ -79,7 +139,7 @@ export const advisors = [
   //   bio: `Elisabeth Hill is a loyal woman from Orlando who can only be seen by day. She looks approachable. She comes from a working class family. She must use her talent for teaching to heal the people around her before she can work on her own problems.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Work', 'Loyal receptionist'],
+  //   tags: ['Work', 'Loyal receptionist',  '⏳ Moved 5 years ago'],
   // },
   // business
   {
@@ -90,7 +150,20 @@ export const advisors = [
     bio: `Thinker. Writer. Professional alcohol trailblazer. Devoted reader. Internet scholar. Entrepreneur. Communicator. Foodaholic. Moved from US to Mexico 8 years ago and can share my experience`,
     from: 'usa',
     to: 'mx',
-    tags: ['Business'],
+    monthlyLivingCost: '$8,200',
+    movingBudget: '$22,000',
+    yearOfMove: 2013,
+    movingReason: 'Business',
+    tags: [
+      {
+        label: 'Business',
+        tooltip: 'Moved for business',
+      },
+      {
+        label: '⏳ Moved 2 years ago',
+        tooltip: 'Rich moved in 2019',
+      },
+    ],
   },
   // {
   //   id: 12,
@@ -100,7 +173,7 @@ export const advisors = [
   //   bio: `I moved with my wife to Mexico 4 years ago and living my best life here.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Business', 'Calculating chef'],
+  //   tags: ['Business', 'Calculating chef',  '⏳ Moved 5 years ago'],
   // },
   // {
   //   id: 13,
@@ -110,7 +183,7 @@ export const advisors = [
   //   bio: `A 31-year-old doctor is angry about politics. Physically, she is built like a cat. She strongly dislikes her wife. On Saturdays, she likes to cut her toenails.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Business', 'Sleepy doctor'],
+  //   tags: ['Business', 'Sleepy doctor',  '⏳ Moved 5 years ago'],
   // },
   // {
   //   id: 14,
@@ -120,7 +193,7 @@ export const advisors = [
   //   bio: `Leslie Simpson is a helpful woman from Atlanta who can only dance when her pet parrot is in her pocket. She always wears a brown dress. She always carries a blue cape. She is striving to redeem herself after hijacking an ambulence.`,
   //   from: 'usa',
   //   to: 'mx',
-  //   tags: ['Business', 'Helpful solicitor'],
+  //   tags: ['Business', 'Helpful solicitor',  '⏳ Moved 5 years ago'],
   // },
   // family
   {
@@ -131,7 +204,20 @@ export const advisors = [
     bio: `Hi, My name is Josephine. A 64-year-old history professor living in Mexico with my husband for more than 7 years now. I work at a local university mostly for fun. I can gladly help you relocate with your family, since I know most of the schools that are worth recommending. `,
     from: 'usa',
     to: 'mx',
-    tags: ['Family'],
+    monthlyLivingCost: '$5,200',
+    movingBudget: '$16,000',
+    yearOfMove: 2014,
+    movingReason: 'Family',
+    tags: [
+      {
+        label: 'Family',
+        tooltip: 'Moved with family',
+      },
+      {
+        label: '⏳ Moved 2 years ago',
+        tooltip: 'Josephine moved in 2019',
+      },
+    ],
   },
   {
     id: 17,
@@ -141,7 +227,20 @@ export const advisors = [
     bio: `Hi, My name is Annelie. A happy woman from Orlando who moved to Mexico with my family to start a dive business. We have been very happy by making this choice and would love to help you and your family relocate also.  We can help you plan, budget, and make your move a breeze. `,
     from: 'usa',
     to: 'mx',
-    tags: ['Family'],
+    monthlyLivingCost: '$3,300',
+    movingBudget: '$16,000',
+    yearOfMove: 2014,
+    movingReason: 'Family',
+    tags: [
+      {
+        label: 'Family',
+        tooltip: 'Moved with family',
+      },
+      {
+        label: '⏳ Moved 3 years ago',
+        tooltip: 'Annelie moved in 2018',
+      },
+    ],
   },
   {
     id: 18,
@@ -151,7 +250,20 @@ export const advisors = [
     bio: `Hi, my name is Bill. A US lawyer with Mexican roots that decided to move to Mexico after my family had been living in the US for more than 4 generations. I am an authorized lawyer that can help you with setting up your new life in Mexico like I did myself personally 12 years ago with my wife and two small children. We can help budget, plan and with basic essentials.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Family'],
+    monthlyLivingCost: '$6,200',
+    movingBudget: '$14,200',
+    yearOfMove: 2009,
+    movingReason: 'Family',
+    tags: [
+      {
+        label: 'Family',
+        tooltip: 'Moved with family',
+      },
+      {
+        label: '⏳ Moved 12 years ago',
+        tooltip: 'Bill moved in 2009',
+      },
+    ],
   },
   {
     id: 19,
@@ -161,68 +273,164 @@ export const advisors = [
     bio: `Hi, My name is Marcus. An experienced radiologist who is addicted to gourmet cooking. I moved to Mexico in the late 1990's and have loved it ever since. I met my wife in Mexico and have later expanded the family with two wonderful children. I have to date helped more than 10 families set up new lives in Mexico covering everything to schools, housing, doctors etc. `,
     from: 'usa',
     to: 'mx',
-    tags: ['Family'],
+    monthlyLivingCost: '$5,200',
+    movingBudget: '$14,000',
+    yearOfMove: 1997,
+    movingReason: 'Family',
+    tags: [
+      {
+        label: 'Family',
+        tooltip: 'Moved with family',
+      },
+      {
+        label: '⏳ Moved 2 years ago',
+        tooltip: 'Matthew moved in 2019',
+      },
+    ],
   },
   {
     id: 20,
     name: 'Antony',
     gender: 'male',
-    picture: 'https://randomuser.me/api/portraits/men/70.jpg',
+    picture: 'https://randomuser.me/api/portraits/men/75.jpg',
     bio: `Hi, My name is Antony. I am a 45 year old man who lives in Mexico with my wife and four wonderful children. I used to work as an investment banker in the US. I can consult you with a 3-6 months plan of moving and all cost associated. I can also assist you with dealing with taxes in Mexico and the US. I look forward to making new friends and I am particularly interested in helping more families coming to Mexico. Having four children gives us a good insight into the school system in Mexico. Private and local`,
     from: 'usa',
     to: 'mx',
-    tags: ['Family'],
+    monthlyLivingCost: '$2,200',
+    movingBudget: '$10,200',
+    yearOfMove: 2009,
+    movingReason: 'Family',
+    tags: [
+      {
+        label: 'Family',
+        tooltip: 'Moved with family',
+      },
+      {
+        label: '⏳ Moved 6 years ago',
+        tooltip: 'Antony moved in 2015',
+      },
+    ],
   },
   // retirement
   {
     id: 21,
     name: 'Ben',
     gender: 'male',
-    picture: 'https://randomuser.me/api/portraits/men/95.jpg',
+    picture:
+      'https://images.generated.photos/PLl_BT3MW1a5A0oTCImAwcqakB5SZMjOGargZRyqThg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNjU0MDIuanBn.jpg',
     bio: `Hi, My name I Ben. I am 47 year-old man that moved from United States to Mexico 5 years ago. I moved because my wife comes from Mexico and we wanted to setup a new life here. Moving from the US is not easy. But will gladly give you all the insights you need. Setting up a bank account, finding a doctor, dealing with taxes and avoid all the mistakes I see people make`,
     from: 'usa',
     to: 'mx',
-    tags: ['Retirement'],
+    monthlyLivingCost: '$2,600',
+    movingBudget: '$14,200',
+    yearOfMove: 2016,
+    movingReason: 'Retirement',
+    tags: [
+      {
+        label: 'Retirement',
+        tooltip: 'Moved after retirement',
+      },
+      {
+        label: '⏳ Moved 8 years ago',
+        tooltip: 'Ben moved in 2013',
+      },
+    ],
   },
   {
     id: 22,
     name: 'Ashley',
     gender: 'female',
-    picture: 'https://randomuser.me/api/portraits/women/24.jpg',
+    picture:
+      'https://images.generated.photos/_DiBt8-KBtPAb0DbdckBwXJdCuADB6flShmzYhBgwn8/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxMDgwODQuanBn.jpg',
     bio: `Hi, My name is Ashley. A former New Yorker. I moved to Mexico four years ago and love it here. Yes, moving is time consuming, but It has been so worth it for me. I moved to Mexico because I wanted a better retirement than I could get in the US for 30% less of the cost. I can help you find a new home, how to deal with locals and US paperwork.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Retirement'],
+    monthlyLivingCost: '$1,600',
+    movingBudget: '$8,000',
+    yearOfMove: 2016,
+    movingReason: 'Retirement',
+    tags: [
+      {
+        label: 'Retirement',
+        tooltip: 'Moved after retirement',
+      },
+      {
+        label: '⏳ Moved 22 years ago',
+        tooltip: 'Ashley moved in 1999',
+      },
+    ],
   },
   {
     id: 23,
     name: 'Peter',
     gender: 'male',
-    picture: 'https://randomuser.me/api/portraits/men/38.jpg',
+    picture:
+      'https://images.generated.photos/-vmtcy0mLsx_XoIw3trKoQCOXLdluI7LDITchmdvkt4/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNzMwOTkuanBn.jpg',
     bio: `Hi, My name is Peter. Former lawyer from Idaho, who wanted a new life in Mexico. I have dream of FIRE since 2010 and in 2015 I finally reached my goal and retired with my wife in a better climate, at 40% lower cost than our past life in Idaho (including flights home to visit family) I can assist you with a high level insight into the legal setup of moving from the US to Mexico. Who to avoid and who to trust. A bit special for me is that I have knee discabilitatis. Therefore I know the medical system quite well in Mexico compared to the US.`,
     from: 'usa',
     to: 'mx',
-    tags: ['Retirement'],
+    monthlyLivingCost: '$4,500',
+    movingBudget: '$13,000',
+    yearOfMove: 2015,
+    movingReason: 'Retirement',
+    tags: [
+      {
+        label: 'Retirement',
+        tooltip: 'Moved after retirement',
+      },
+      {
+        label: '⏳ Moved 15 years ago',
+        tooltip: 'Peter moved in 2006',
+      },
+    ],
   },
   {
     id: 24,
     name: 'Alice',
     gender: 'female',
-    picture: 'https://randomuser.me/api/portraits/women/40.jpg',
+    picture:
+      'https://images.generated.photos/T7nuMbC-Iq4pLNh82swfEG0QQH__rNM3w-SpiCwaH38/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1MDk4NTYuanBn.jpg',
     bio: `Hi, my name is Alice. Me and my husband moved to Mexico city in 2010 and have been living here for more than 10 years now. We love it here. We are both senior citizens and have enjoyed being able to retire 7 years before our plan in Mexico vs. US. We can assist you with advice for senior citizens - Taxes, medicare, 401K, doctors, senior citizen aid, maids etc. We look forward making new friends`,
     from: 'usa',
     to: 'mx',
-    tags: ['Retirement'],
+    monthlyLivingCost: '$2,200',
+    movingBudget: '$6,000',
+    yearOfMove: 2010,
+    movingReason: 'Retirement',
+    tags: [
+      {
+        label: 'Retirement',
+        tooltip: 'Moved after retirement',
+      },
+      {
+        label: '⏳ Moved 2 years ago',
+        tooltip: 'Alice moved in 2019',
+      },
+    ],
   },
   {
     id: 25,
     name: 'Mike',
     gender: 'male',
-    picture: 'https://randomuser.me/api/portraits/men/69.jpg',
+    picture:
+      'https://images.generated.photos/1k3lzxgEtWeS2mefKNXprUfn-kPpzyz3QJ0xuizOQrE/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3NzkzMDkuanBn.jpg',
     bio: `Hi, my name is Mike. I am a 32 year old software developer that moved to Mexico in 2017 and have loved it ever since. I work remotely and own a small vinery here on +30 acres of land. I look forward making new friends and certain to help people with setting up a new great life in Mexico. Covering everything like budgets, housing, banking, work, dealing with governments you name it."7. Kristen Lopez, 25, magical father`,
     from: 'usa',
     to: 'mx',
-    tags: ['Retirement'],
+    monthlyLivingCost: '$5,200',
+    movingBudget: '$18,000',
+    yearOfMove: 2017,
+    movingReason: 'Retirement',
+    tags: [
+      {
+        label: 'Retirement',
+        tooltip: 'Moved after retirement',
+      },
+      {
+        label: '⏳ Moved 6 years ago',
+        tooltip: 'Mike moved in 2015',
+      },
+    ],
   },
 ]
 

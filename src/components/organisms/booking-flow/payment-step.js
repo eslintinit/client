@@ -10,7 +10,7 @@ export const PaymentStep = ({ close, next }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed"
+      className="flex items-center justify-center w-full h-full bg-black bg-opacity-50 fixed z-10"
       onClick={() => {
         splitbee.track('Close modal: payment step')
         global.analytics.track('Close modal: payment step')
@@ -23,17 +23,17 @@ export const PaymentStep = ({ close, next }) => {
         title={'Payment'}
         body={
           <span clasName="text-gray-500">
-            {`Pay $${selectedAdvisor.price * 60} to ${selectedAdvisor.name}`}
+            {`Pay $${selectedAdvisor.price} to ${selectedAdvisor.name}`}
           </span>
         }
         actions={
           <Button
             onClick={() => {
               splitbee.track('Proceed to payment', {
-                price: selectedAdvisor.price * 60,
+                price: selectedAdvisor.price,
               })
               global.analytics.track('Proceed to payment', {
-                price: selectedAdvisor.price * 60,
+                price: selectedAdvisor.price,
               })
               // mixpanel.track('Proceed to payment', {
               //   price: selectedAdvisor.price * 60,

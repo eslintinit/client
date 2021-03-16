@@ -1,6 +1,9 @@
+import splitbee from '@splitbee/web'
+import Link from 'next/link'
+
 export const Steps = () => {
   return (
-    <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20 lg:pt-32">
       <div className="grid gap-6 row-gap-10 lg:grid-cols-2 max-w-6xl mx-auto">
         <div className="lg:py-6 lg:pr-16">
           <div className="flex">
@@ -72,7 +75,7 @@ export const Steps = () => {
                 </div>
               </div>
             </div>
-            <div className="pt-1 pb-8">
+            <div className="pt-1 pb-0">
               <p className="text-gray-900 mb-2 text-lg font-bold">
                 Get advice and insights
               </p>
@@ -83,6 +86,24 @@ export const Steps = () => {
                 per-minute rate, and they get paid. You can then leave a rating
                 and review for the advisor.
               </p>
+              <Link href="/advisors">
+                <button
+                  className="component border-2 rounded font-medium tracking-wide text-md px-6 py-3 focus:outline-none focus:shadow-outline border-indigo-500 text-indigo-500 hover:bg-indigo-50 hover:text-indigo-600 mt-16"
+                  onClick={() => {
+                    global.analytics.track('Open advisors list', {
+                      from: 'Get started',
+                    })
+                    splitbee.track('Open advisors list', {
+                      from: 'Get started',
+                    })
+                    // mixpanel.track('Open advisors list', {
+                    // from: 'Get started',
+                    // })
+                  }}
+                >
+                  Get started
+                </button>
+              </Link>
             </div>
           </div>
         </div>{' '}

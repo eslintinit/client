@@ -25,16 +25,16 @@ export const Header = ({ fixed = false, light = false }) => {
               }
             />
           </Link>
-        </div>{' '}
-        <ul className="flex items-center space-x-8 lg:flex">
+        </div>
+        <ul className="flex items-center space-x-4 sm:space-x-8 lg:flex">
           <li>
-            <Link href="/advisors">
+            <Link href="/about">
               <a
-                aria-label="Sign in"
-                title="Sign in"
+                aria-label="About"
+                title="About"
                 className={`font-medium tracking-wide ${
                   light ? 'text-gray-400' : 'text-gray-700'
-                } transition-colors duration-200 hover:text-gray-900 hidden lg:flex`}
+                } transition-colors duration-200 hover:text-gray-900 hidden sm:flex`}
                 style={
                   light
                     ? {
@@ -45,38 +45,28 @@ export const Header = ({ fixed = false, light = false }) => {
                     : {}
                 }
                 onClick={() => {
-                  global.analytics.track('Open advisors list', {
-                    from: 'Browse advisors',
-                  })
-                  splitbee.track('Open advisors list', {
-                    from: 'Browse advisors',
-                  })
-                  // mixpanel.track('Open advisors list', {
-                  // from: 'Browse advisors',
-                  // })
+                  global.analytics.track('Open About page')
+                  splitbee.track('Open About page')
                 }}
               >
-                Browse advisors
+                About us
               </a>
             </Link>
-          </li>{' '}
+          </li>
           <li>
             <Link href="/advisors">
               <a
                 aria-label="Sign up"
                 onClick={() => {
                   global.analytics.track('Open advisors list', {
-                    from: 'Get started',
+                    from: 'Header',
                   })
                   splitbee.track('Open advisors list', {
-                    from: 'Get started',
+                    from: 'Header',
                   })
-                  // mixpanel.track('Open advisors list', {
-                  // from: 'Get started',
-                  // })
                 }}
                 title="Sign up"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-500 hover:bg-indigo-500 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-500 hover:bg-indigo-600 focus:shadow-outline focus:outline-none"
                 style={
                   light
                     ? {
@@ -86,7 +76,7 @@ export const Header = ({ fixed = false, light = false }) => {
                     : {}
                 }
               >
-                Get started
+                Browse advisors
               </a>
             </Link>
           </li>

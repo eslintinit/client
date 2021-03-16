@@ -1,9 +1,11 @@
 import { Button, Input, Textarea } from 'components/atoms'
 
-export const Modal = ({ close, title, body, actions }) => {
+export const Modal = ({ close, title, body, actions, center }) => {
   return (
     <div
-      className="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"
+      className={`modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto flex flex-col ${
+        center ? 'items-center' : ''
+      }`}
       onClick={(e) => e.stopPropagation()}
     >
       <div
@@ -21,11 +23,27 @@ export const Modal = ({ close, title, body, actions }) => {
         </svg>
       </div>
       <div className="modal-content py-4 text-left px-6">
-        <div className="flex justify-between items-center pb-3 mb-2 mt-2">
-          <p className="text-md font-bold text-gray-700">{title}</p>
+        <div
+          className={`flex items-center pb-3 mb-2 mt-2 ${
+            center ? 'justify-center' : 'justify-between'
+          }`}
+        >
+          <p
+            className={`text-md font-bold text-gray-700 ${
+              center ? 'text-center' : ''
+            }`}
+          >
+            {title}
+          </p>
         </div>
         {body}
-        <div className="flex justify-end pt-2 mt-4 mb-2">{actions}</div>
+        <div
+          className={`flex pt-2 mt-4 mb-2 ${
+            center ? 'justify-center' : 'justify-end'
+          }`}
+        >
+          {actions}
+        </div>
       </div>
     </div>
   )
