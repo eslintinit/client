@@ -21,7 +21,9 @@ export const Reviews = ({ advisor }) => {
             return <div />
           }
 
-          return <Comment key={review} comment={review} advisor={advisor} />
+          return (
+            <Comment key={review.author} comment={review} advisor={advisor} />
+          )
         })}
       </div>
     </div>

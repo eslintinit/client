@@ -39,8 +39,8 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
       <div className="flex flex-col px-4 lg:px-0 w-full lg:w-4/5 mt-8 lg:mt-20 min-h-screen max-w-3xl lg:max-w-2xl">
         <div className="flex justify-between">
           <div className="flex flex-col">
-            <div className="flex justify-between">
-              <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row justify-between">
+              <div className="flex flex-col items-center md:items-start">
                 <Avatar src={(selectedAdvisor || advisor).picture} />
                 <h2 className="text-2xl font-medium mt-4 flex items-center">
                   {advisor.name}
@@ -85,7 +85,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
                 )}
               </div>
             </div>
-            <span className="text-lg text-gray-700 w-full mt-4 mb-2">
+            <span className="text-md md:text-lg text-center md:text-left text-gray-700 w-full mt-8 md:mt-4 mb-2">
               {advisor.bio}
             </span>
             {/*
@@ -93,7 +93,7 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
               <Tags tags={advisor.tags || []} />
             </div>
             */}
-            <div className="self-start mt-1">
+            <div className="self-center md:self-start mt-0 md:mt-1">
               <ParametersGrid
                 parameters={[
                   {
@@ -128,15 +128,16 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
               />
             </div>
             <div className="border-b my-12" />
-            <div className="flex justify-between">
-              <div className="w-1/2">
+            <div className="flex flex-col items-center md:items-start md:flex-row justify-between">
+              <div className="w-full md:w-1/2">
                 <Timeline
                   advisor={advisor}
                   setShowBookingWidget={setShowBookingWidget}
                   year={advisor.yearOfMove}
                 />
               </div>
-              <div className="w-1/2">
+              <div className="flex md:hidden border-b my-12" />
+              <div className="w-full md:w-1/2">
                 <MovingBudgetOne
                   advisor={advisor}
                   cost={advisor.movingBudget}
@@ -151,8 +152,8 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
             */}
             {/*
              */}
-            <div className="flex items-center justify-between mt-16">
-              <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-between mt-16 flex-col-reverse md:flex-row">
+              <div className="flex items-center space-x-4 mt-4 md:mt-0">
                 <a className="text-gray-500 transition-colors duration-300 hover:text-indigo-500">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />

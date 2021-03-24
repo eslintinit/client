@@ -21,11 +21,11 @@ export const MonthlyCosts = ({ cost }) => {
 
   return (
     <>
-      <div className="flex flex-col relative">
+      <div className="flex flex-col items-center md:items-start relative">
         <span className="mb-6 font-medium text-xl text-gray-800">
           Monthly living costs in Mexico
         </span>
-        <ul className="max-w-xs">
+        <ul className="w-2/3 md:w-full">
           <Item total label="Total" value={cost} />
           <Item label="Rent" value="XX" />
           <Item label="Food" value="XX" />

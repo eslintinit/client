@@ -92,7 +92,7 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
               <Tags tags={advisor.tags || []} />
               */}
             </div>
-            <div className="flex flex-col-reverse md:flex-col items-center mt-4 md:mt-0">
+            <div className="flex flex-col md:flex-col items-center mt-4 md:mt-0">
               <Button
                 onClick={(e) => {
                   e.stopPropagation()
@@ -111,7 +111,7 @@ export const AdvisorListItem = ({ advisor: initAdvisor }) => {
               >
                 Get in touch
               </Button>
-              <div className="flex flex-col">
+              <div className="flex flex-col mt-4 md:mt-0">
                 {price && (
                   <div className="flex flex-col items-center mt-2 border-b pb-2">
                     <span className="text-sm text-medium text-gray-700">{`$${price}`}</span>

@@ -30,11 +30,11 @@ export const Timeline = ({ setShowBookingWidget, year, advisor }) => {
     { time: `24 Jun ${year} - present`, event: 'Living his best life in 🇲🇽' },
   ]
   return (
-    <div className="flex flex-col relative h-full">
+    <div className="flex flex-col items-center md:items-start relative h-full">
       <span className="mb-4 font-medium text-xl text-gray-800">
         Moving plan
       </span>
-      <ol className="p-4 pb-0 mb-12">
+      <ol className="p-4 pb-0 mb-12 w-2/3 md:w-full">
         {events.map((event, i) => (
           <TimelineItem
             key={event}

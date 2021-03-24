@@ -22,11 +22,11 @@ export const MovingBudgetOne = ({ cost, advisor }) => {
 
   return (
     <>
-      <div className="flex flex-col relative ml-4">
+      <div className="flex flex-col items-center md:items-start relative ml-4">
         <span className="mb-6 font-medium text-xl text-gray-800">
           Moving budget
         </span>
-        <ul className="max-w-xs">
+        <ul className="w-2/3 md:w-full">
           <Item total label="Total" value={cost} />
           <Item label="Medical checks" value="XX" />
           <Item label="Insurance" value="XX" />
@@ -43,7 +43,7 @@ export const MovingBudgetOne = ({ cost, advisor }) => {
         >
           See price breakdown
         </span>
-        <div className="absolute bottom-0 ml-5" style={{ zIndex: 1 }}>
+        <div className="absolute bottom-1 ml-5" style={{ zIndex: 1 }}>
           {advisor && advisor.name && (
             <div className="component border border-transparent rounded-lg font-medium tracking-wide text-sm px-12 py-6 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 flex flex-col items-center text-center">
               {`Pay 30$ to see ${advisor.name.split(' ')[0]}'s`} <br />
