@@ -131,12 +131,14 @@ export const AdvisorTemplate = ({ advisor = {} }) => {
             <div className="flex justify-between">
               <div className="w-1/2">
                 <Timeline
+                  advisor={advisor}
                   setShowBookingWidget={setShowBookingWidget}
                   year={advisor.yearOfMove}
                 />
               </div>
               <div className="w-1/2">
                 <MovingBudgetOne
+                  advisor={advisor}
                   cost={advisor.movingBudget}
                   setShowBookingWidget={setShowBookingWidget}
                 />

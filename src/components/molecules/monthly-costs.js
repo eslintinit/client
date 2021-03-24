@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from 'components/atoms'
 import { Modal } from 'components/organisms'
+import splitbee from '@splitbee/web'
 
 const Item = ({ label, value, total, last }) => (
   <li
@@ -34,7 +35,12 @@ export const MonthlyCosts = ({ cost }) => {
         </ul>
         <span
           className="font-semibold text-indigo-500 mt-6 cursor-pointer hover:underline"
-          onClick={() => setShowModal(true)}
+          onClick={() => {
+            setShowModal(true)
+
+            global.analytics.track('Buy monhtly costs breakdown', {})
+            splitbee.track('Buy monhtly costs breakdown', {})
+          }}
         >
           See price breakdown
         </span>

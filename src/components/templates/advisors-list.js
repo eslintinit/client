@@ -53,30 +53,30 @@ export const AdvisorsListTemplate = ({
             : true,
         ),
     )
-  }, [countryFrom])
+  }, [countryFrom, option, countryTo])
 
-  useEffect(() => {
-    setAdvisors(
-      initAdvisors
-        .filter((advisor) => {
-          if (
-            countryFrom === 'usa' &&
-            advisor.from === 'usa' &&
-            countryTo === 'mx' &&
-            advisor.to === 'mx'
-          ) {
-            return true
-          }
-          return false
-        })
-        .filter((advisor) =>
-          option
-            ? advisor.tags.map((t) => t.label.toLowerCase()).indexOf(option) >
-              -1
-            : true,
-        ),
-    )
-  }, [countryTo])
+  // useEffect(() => {
+  //   setAdvisors(
+  //     initAdvisors
+  //       .filter((advisor) => {
+  //         if (
+  //           countryFrom === 'usa' &&
+  //           advisor.from === 'usa' &&
+  //           countryTo === 'mx' &&
+  //           advisor.to === 'mx'
+  //         ) {
+  //           return true
+  //         }
+  //         return false
+  //       })
+  //       .filter((advisor) =>
+  //         option
+  //           ? advisor.tags.map((t) => t.label.toLowerCase()).indexOf(option) >
+  //             -1
+  //           : true,
+  //       ),
+  //   )
+  // }, [countryTo])
 
   return (
     <Layout bg="gray-50" hideFooter hideHeader>

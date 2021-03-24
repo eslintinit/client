@@ -6,12 +6,11 @@ export const About = () => (
       </h2>
     </div>
     <div className="max-w-3xl flex flex-col">
-      <p className="mb-4 text-gray-600 text-lg leading-8">
+      <p className="mb-4 text-gray-600 text-md leading-8">
         Movenation is a company of people that want to make the worlds best
-        website for moving citizenship from one country to another country.{' '}
-        <span className="text-indigo-600">Our first goal</span> is to help 1
-        million people moving. We work towards making country moving as
-        transparent and easy as possible.
+        website for moving citizenship from one country to another country. Our
+        first goal is to help 1 million people moving. We work towards making
+        country moving as transparent and easy as possible.
         <br />
         <br />
         Today we see moving your citizenship as challenging as booking airline
@@ -35,7 +34,7 @@ export const About = () => (
         <br />
         <br />
         <span className="text-indigo-600">
-          Thinking <span className="font-medium">BIG</span>
+          Thinking <span className="font-bold">big</span>
         </span>{' '}
         - We believe that we can change entire countries by helping more people
         move from expensive cities to less expensive cities. Moving pensions &
@@ -44,11 +43,23 @@ export const About = () => (
         insights of where they alternatively could retire and live from their
         savings.
       </p>
+      <div className="border-b my-12" />
       <br />
-      <span className="text-lg mt-8 text-gray-600">
-        Movenation is early-stage and we are constantly learning. Please share
-        with us if you have good ideas how to improve our service:{' '}
+      <span className="text-md mt-8 text-gray-600 text-center leading-8">
+        Movenation is constantly learning. Please share with us if you have good
+        ideas how to improve our service:{' '}
         <a className="text-indigo-600 font-medium">hi.movenation@gmail.com</a>
+      </span>
+      <br />
+      <br />
+      <div className="border-b my-12" />
+      <span className="text-md mt-8 text-gray-600 text-center leading-8">
+        <span className="font-medium">Offices</span>
+        <div className="grid grid-cols-3 mt-4">
+          <span>New York</span>
+          <span>Copenhagen</span>
+          <span>Kyiv</span>
+        </div>
       </span>
       <span className="text-lg mt-4 text-gray-600"></span>
       {/*

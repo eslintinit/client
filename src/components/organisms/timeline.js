@@ -2,7 +2,7 @@ import { Button } from 'components/atoms'
 import { TimelineItem } from 'components/molecules'
 import splitbee from '@splitbee/web'
 
-export const Timeline = ({ setShowBookingWidget, year }) => {
+export const Timeline = ({ setShowBookingWidget, year, advisor }) => {
   const events = [
     {
       time: `16 Sep, ${year}`,
@@ -44,22 +44,26 @@ export const Timeline = ({ setShowBookingWidget, year }) => {
         ))}
       </ol>
       <div className="absolute bottom-0 ml-8" style={{ zIndex: 1 }}>
-        <div className="component border border-transparent rounded-lg font-medium tracking-wide text-sm px-8 py-6 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 flex flex-col items-center text-center">
-          Book a call with Mike <br />
-          to learn about his moving plan
-          <div
-            className="component border-2 border-indigo rounded font-semibold tracking-wide text-sm px-5 py-2 focus:outline-none focus:shadow-outline bg-white-500 text-white hover:bg-indigo-900 hover:text-gray-200 w-max mt-4 cursor-pointer"
-            onClick={() => setShowBookingWidget(true)}
-          >
-            Schedule call
+        {advisor && advisor.name && (
+          <div className="component border border-transparent rounded-lg font-medium tracking-wide text-sm px-8 py-6 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 flex flex-col items-center text-center">
+            {`Book a call ${advisor.name.split(' ')[0]}`} <br />
+            to learn about his moving plan
+            <div
+              className="component border-2 border-indigo rounded font-semibold tracking-wide text-sm px-5 py-2 focus:outline-none focus:shadow-outline bg-white-500 text-white hover:bg-indigo-900 hover:text-gray-200 w-max mt-4 cursor-pointer"
+              onClick={() => setShowBookingWidget(true)}
+            >
+              Schedule call
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <div
         className="absolute background-gray-900 w-full bottom-0"
         onClick={() => {
-          splitbee.track('Start scheduling call')
-          global.analytics.track('Start scheduling call')
+          splitbee.track('Start scheduling call', { from: 'moving plan' })
+          global.analytics.track('Start scheduling call', {
+            from: 'moving plan',
+          })
           // mixpanel.track('Start scheduling call')
           setShowBookingWidget(true)
         }}

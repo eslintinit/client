@@ -28,9 +28,11 @@ export const Comment = ({ comment, advisor }) => {
         {/*
         <span className="text-xs text-gray-400">3:34 PM</span>
         */}
-        <p className="text-md sm:text-sm">
-          {comment.replaceAll('{{X}}', advisor.name.split(' ')[0])}
-        </p>
+        {advisor && advisor.name && (
+          <p className="text-md sm:text-sm">
+            {comment.replaceAll('{{X}}', advisor.name.split(' ')[0])}
+          </p>
+        )}
       </div>
     </div>
   )

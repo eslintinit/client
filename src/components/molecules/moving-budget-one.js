@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Button } from 'components/atoms'
 import { Modal } from 'components/organisms'
 
+import splitbee from '@splitbee/web'
+
 const Item = ({ label, value, total, last }) => (
   <li
     className={`flex justify-between items-center ${
@@ -15,7 +17,7 @@ const Item = ({ label, value, total, last }) => (
   </li>
 )
 
-export const MovingBudgetOne = ({ cost }) => {
+export const MovingBudgetOne = ({ cost, advisor }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -42,16 +44,18 @@ export const MovingBudgetOne = ({ cost }) => {
           See price breakdown
         </span>
         <div className="absolute bottom-0 ml-5" style={{ zIndex: 1 }}>
-          <div className="component border border-transparent rounded-lg font-medium tracking-wide text-sm px-12 py-6 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 flex flex-col items-center text-center">
-            Pay 30$ to see Mike's <br />
-            moving budget plan
-            <div
-              className="component border-2 border-indigo rounded font-semibold tracking-wide text-sm px-5 py-2 focus:outline-none focus:shadow-outline bg-white-500 text-white hover:bg-indigo-900 hover:text-gray-200 w-max mt-4 cursor-pointer"
-              onClick={() => setShowModal(true)}
-            >
-              See price breakdown
+          {advisor && advisor.name && (
+            <div className="component border border-transparent rounded-lg font-medium tracking-wide text-sm px-12 py-6 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 flex flex-col items-center text-center">
+              {`Pay 30$ to see ${advisor.name.split(' ')[0]}'s`} <br />
+              moving budget plan
+              <div
+                className="component border-2 border-indigo rounded font-semibold tracking-wide text-sm px-5 py-2 focus:outline-none focus:shadow-outline bg-white-500 text-white hover:bg-indigo-900 hover:text-gray-200 w-max mt-4 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
+                See price breakdown
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <div
           className="absolute background-gray-900 w-full bottom-0"
