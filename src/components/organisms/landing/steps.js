@@ -3,7 +3,10 @@ import Link from 'next/link'
 
 export const Steps = () => {
   return (
-    <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20 lg:pt-32">
+    <div className="px-4 pb-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:pb-20 pt-16 md:pt-0 lg:pt-16 border-t border-gray-100">
+      <h2 className="sm:text-4xl md:mx-auto max-w-full lg: max-w-lg mb-20 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 text-center">
+        How it works
+      </h2>{' '}
       <div className="grid gap-6 row-gap-10 lg:grid-cols-2 max-w-6xl mx-auto">
         <div className="lg:py-6 lg:pr-16">
           <div className="flex">
@@ -20,11 +23,15 @@ export const Steps = () => {
                 Pick an advisor.
               </p>{' '}
               <p className="text-gray-700">
+                They'll help you explore the best options for you, including the
+                country's best cities, work opportunities, lifestyle and more.
+              </p>
+              {/*
                 Movenation is a global network of people who have moved country.
                 Browse & search our community of advisors that have gone through
                 the process of moving to the country/city you are considering
                 and find the right one for you.
-              </p>
+                */}
             </div>
           </div>{' '}
           <div className="flex">
@@ -111,7 +118,7 @@ export const Steps = () => {
           <img
             src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             alt=""
-            className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
+            className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full hidden lg:flex"
           />
         </div>
       </div>

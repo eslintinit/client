@@ -20,12 +20,11 @@ export const PaymentStep = ({ close, next }) => {
     >
       <Modal
         close={close}
-        title={'Payment'}
+        title={`Payment`}
         body={
-          <span clasName="text-gray-500">
-            {`Pay $${selectedAdvisor.price} to ${selectedAdvisor.name}`}
-          </span>
+          <span>{`Pay $${selectedAdvisor.price} to ${selectedAdvisor.name}`}</span>
         }
+        center
         actions={
           <Button
             onClick={() => {

@@ -1,5 +1,5 @@
 export const FeaturedIn = () => (
-  <div className="px-4 pb-16 mx-auto w-full sm:px-8 md:px-24 lg:px-32 lg:pb-32 bg-white flex flex-col items-center border-b pt-24">
+  <div className="px-4 pb-16 mx-auto w-full sm:px-8 md:px-24 lg:px-32 lg:pb-32 bg-white flex flex-col items-center border-b border-gray-100 pt-24">
     <span className="text-gray-400 opacity-60 text-sm font-medium uppercase mb-16">
       As featured on
     </span>

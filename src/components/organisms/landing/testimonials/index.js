@@ -40,7 +40,7 @@ const Person = ({ person }) => (
 )
 export const Testimonials = () => {
   return (
-    <div className="md:px-24 lg:px-8 lg:py-20 w-full px-4 py-16 mx-auto">
+    <div className="md:px-24 lg:px-8 lg:py-20 w-full px-4 py-16 mx-auto mt-4 border-b border-gray-100">
       <div className="md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 max-w-full mb-10">
         <h2 className="sm:text-4xl md:mx-auto max-w-full lg: max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 text-center">
           Talk to people who moved.

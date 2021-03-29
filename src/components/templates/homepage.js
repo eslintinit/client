@@ -3,7 +3,10 @@ import { Feature, Feature2 } from 'components/molecules'
 import {
   Intro,
   MoveSection,
+  Values,
+  Cases,
   Steps,
+  Ratings,
   Testimonials,
   Content,
   AdvisorsSection,
@@ -16,9 +19,12 @@ import {
 
 export const HomepageTemplate = () => {
   return (
-    <Layout bg="gray-50">
+    <Layout>
       <Intro />
+      <Values />
+      <Cases />
       <Steps />
+      <Ratings />
       <Testimonials />
       {/*
       <CTA />

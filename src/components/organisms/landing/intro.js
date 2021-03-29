@@ -11,7 +11,7 @@ export const Intro = () => {
       }}
     >
       <div className="flex flex-col justify-center items-center w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
-        <div className="my-12 lg:my-40 lg:pr-5">
+        <div className="my-20 lg:my-48 lg:pr-5">
           <div className="mb-6">
             <h2 className="mb-6 text-center lg:text-left font-sans text-3xl font-bold tracking-tight text-white md:text-4xl sm:leading-none">
               Planning to move to another country?
@@ -24,9 +24,10 @@ export const Intro = () => {
             </p>
             */}
             <p className="text-base text-white md:text-lg max-w-xl text-center lg:text-left">
-              Get advice &amp; insights from thousands of people who actually
-              moved. Move for study, work, business, taxes or retirement
-              purposes
+              Moving is one of the most life-changing decisions you can make.
+              <br />
+              We want to help by connecting you with people who have done it and
+              giving you insights into their process.
             </p>
           </div>
         </div>
